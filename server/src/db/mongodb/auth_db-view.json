@@ -1,0 +1,28 @@
+[
+    {
+        "$match": {
+            "credential_type": 1,
+            "credential_info": "test@test.com"
+        }
+    },
+    {
+        "$lookup": {
+            "from": "passwd_auth",
+            "localField": "_id",
+            "foreignField": "cred_id",
+            "as": "pass_auth"
+        }
+    },
+    {
+        "$unwind": {
+            "path": "$pass_auth"
+        }
+    },
+    {
+        "$project": {
+            "cred_id": "$pass_auth.cred_id",
+            "hash": "$pass_auth.hash",
+            "salt": "$pass_auth.salt"
+        }
+    }
+]

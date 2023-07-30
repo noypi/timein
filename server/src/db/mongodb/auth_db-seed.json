@@ -1,0 +1,21 @@
+{
+    "auth": [
+        {
+            "column_name": "credentials_type",
+            "data": [
+                {
+                    "type": 1,
+                    "name": "email"
+                },
+                {
+                    "type": 2,
+                    "name": "phone"
+                },
+                {
+                    "type": 3,
+                    "name": "mobile"
+                }
+            ]
+        }
+    ]
+}

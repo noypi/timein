@@ -1,0 +1,16 @@
+# create user
+curl -X POST -H 'Content-Type: application/json' -i http://localhost:8000/user/create --data '{
+  "familyname": "fam",
+  "name": "thename",
+  "email": "test@test.com",
+  "password": "pass1"
+}'
+
+# login
+curl -X POST -H 'Content-Type: application/json' -i http://localhost:8000/auth/login --data '{
+  "email": "test@test.com",
+  "password": "pass1"
+}'
+
+# test Jwt
+curl -X GET http://localhost:8000/auth/islogin -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsIm5hbWUiOiJ0aGVuYW1lIiwiaWF0IjoxNjg4OTY1OTI4LCJleHAiOjE3NDg5NjU4Njh9.k9_BwDn_FxXHjgyr0WfyEI02406b703370tXRg_G_P0"

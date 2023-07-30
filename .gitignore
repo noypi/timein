@@ -5,6 +5,7 @@ build/config\.gypi
 /coverage
 /.devcontainer
 /dist
+dist/
 .DS_Store
 /example
 /example_dist

@@ -1,0 +1,57 @@
+{
+    "auth": [
+        {
+            "column_name": "passwd_auth",
+            "indexes": [
+                [
+                    {
+                        "cred_id": 1
+                    },
+                    {
+                        "unique": true
+                    }
+                ]
+            ]
+        },
+        {
+            "column_name": "user_info",
+            "indexes": [
+                [
+                    {
+                        "cred_id": 1
+                    },
+                    {
+                        "unique": true
+                    }
+                ]
+            ]
+        },
+        {
+            "column_name": "user_bound_credentials",
+            "indexes": [
+                [
+                    {
+                        "credential_type": 1,
+                        "credential_info": 1
+                    },
+                    {
+                        "unique": true
+                    }
+                ]
+            ]
+        },
+        {
+            "column_name": "credentials_type",
+            "indexes": [
+                [
+                    {
+                        "type": 1
+                    },
+                    {
+                        "unique": true
+                    }
+                ]
+            ]
+        }
+    ]
+}
